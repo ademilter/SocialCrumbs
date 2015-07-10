@@ -11,6 +11,7 @@
             include "activity-template.php";
 
             $Cats = array(
+                get_cat_ID('codepen'),
                 get_cat_ID('delicious'),
                 get_cat_ID('dribbble'),
                 get_cat_ID('instapaper'),
@@ -50,6 +51,7 @@
 
 
                 // Event Recipes
+                include "event/codepen.php";
                 include "event/delicious.php";
                 include "event/dribbble.php";
                 include "event/foursquare.php";
