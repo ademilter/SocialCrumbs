@@ -21,9 +21,12 @@ SocialCrumbs is social-feed theme for WordPress that works with ifttt recipes.
 - [ ] facebook-photo
 - [ ] codepen-pen
 - [ ] lastfm-scrobbled
+- [ ] lastfm-like
 - [ ] flickr-favorite
 - [ ] flickr-add-photo
 - [ ] tumblr-like
 - [ ] etsy-favorite
 - [ ] imdb-checkin
 - [ ] imdb-watchlist
+- [ ] pinterest-pinned
+- [ ] pinterest-like
