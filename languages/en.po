@@ -1,0 +1,185 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: s-report\n"
+"POT-Creation-Date: 2014-07-17 23:09+0100\n"
+"PO-Revision-Date: 2014-07-17 23:09+0100\n"
+"Last-Translator: Anatoli Nicolae <desk@anatolinicolae.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../event/calendar-new.php:35 ../event/dribbble-like.php:33
+#: ../event/etsy-favorite.php:33 ../event/facebook-status.php:34
+#: ../event/foursquare-checkin.php:34 ../event/github-repository.php:33
+#: ../event/github-starred.php:33 ../event/imdb-checkins.php:33
+#: ../event/imdb-watchlist.php:33 ../event/instagram-like.php:33
+#: ../event/instagram-like.php:87 ../event/instagram-share.php:36
+#: ../event/instagram-share.php:89 ../event/instapaper-save.php:32
+#: ../event/iphone-photo.php:31 ../event/soundcloud-favorite.php:35
+#: ../event/tumblr-like.php:32 ../event/twitter-favorite.php:32
+#: ../event/twitter-tweet.php:33 ../event/vimeo-like.php:33
+#: ../event/youtube-favorite.php:33 ../header.php:48
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: ../event/calendar-new.php:39
+msgid "Added event"
+msgstr ""
+
+#: ../event/dribbble-like.php:37
+#, php-format
+msgid "Liked <strong>%s</strong> shot"
+msgstr ""
+
+#: ../event/etsy-favorite.php:37
+#, php-format
+msgid "Faved a product from <strong>%s</strong>'s shop"
+msgstr ""
+
+#: ../event/facebook-status.php:38
+msgid "Shared status"
+msgstr ""
+
+#: ../event/foursquare-checkin.php:38
+msgid "Checked in"
+msgstr ""
+
+#: ../event/github-repository.php:37
+msgid "Created a new repository"
+msgstr ""
+
+#: ../event/github-starred.php:37
+#, php-format
+msgid "<strong>%s</strong> starred a repository"
+msgstr ""
+
+#: ../event/imdb-checkins.php:37
+msgid "Whatched a new movie"
+msgstr ""
+
+#: ../event/imdb-watchlist.php:37
+msgid "Added a new movie to a list"
+msgstr ""
+
+#: ../event/instagram-like.php:37
+#, php-format
+msgid "Liked <strong>%s</strong>'s photo"
+msgstr ""
+
+#: ../event/instagram-share.php:40
+msgid "Added a new photo"
+msgstr ""
+
+#: ../event/instagram-share.php:93
+msgid "Added a new video"
+msgstr ""
+
+#: ../event/instapaper-save.php:36
+msgid "Added a new article to the reading list"
+msgstr ""
+
+#: ../event/instapaper-like.php:35
+msgid "Liked new article"
+msgstr ""
+
+#: ../event/iphone-photo.php:35
+msgid "Took a photo with the new iPhone 5"
+msgstr ""
+
+#: ../event/soundcloud-favorite.php:39
+#, php-format
+msgid "Liked <strong>%s</strong>'s track"
+msgstr ""
+
+#: ../event/tumblr-like.php:36
+#, php-format
+msgid "Liked <strong>%s</strong>'s post"
+msgstr ""
+
+#: ../event/twitter-favorite.php:36
+#, php-format
+msgid "Faved <strong>%s</strong>'s tweet"
+msgstr ""
+
+#: ../event/twitter-tweet.php:37
+msgid "Tweeted"
+msgstr ""
+
+#: ../event/vimeo-like.php:37
+#, php-format
+msgid "Liked <strong>%s</strong>'s video"
+msgstr ""
+
+#: ../event/youtube-favorite.php:37
+#, php-format
+msgid "Faved <strong>%s</strong>'s video"
+msgstr ""
+
+#: ../index.php:124
+msgid "Older posts"
+msgstr ""
+
+#: ../index.php:125
+msgid "Newer posts"
+msgstr ""
+
+#: ../functions.php:56
+msgid "Loading new posts"
+msgstr ""
+
+#: ../functions.php:57
+msgid "All post loaded!"
+msgstr ""
+
+#: ../functions.php:103
+msgid "Default"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Site Favicon"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Cover image"
+msgstr ""
+
+#: ../functions.php:146
+msgid "Header Image"
+msgstr ""
+
+#: ../functions.php:153
+msgid "Avatar photo"
+msgstr ""
+
+#: ../functions.php:163
+msgid "Avatar Photo"
+msgstr ""
+
+#: ../functions.php:174
+msgid "Alt Text (Name, Description, etc ...)"
+msgstr ""
+
+#: ../functions.php:181
+msgid "Custom Code"
+msgstr ""
+
+#: ../functions.php:191
+msgid "Header Code (Meta tags, CSS, etc ...)"
+msgstr ""
+
+#: ../functions.php:202
+msgid "Footer Code (Analytics, etc ...)"
+msgstr ""
+
+#: ../header.php:48
+msgid "Last Update"
+msgstr ""

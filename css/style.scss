@@ -1,0 +1,59 @@
+/*!
+	Theme Name: SocialCrumbs
+	Theme URI: https://github.com/ademilter/socialcrumbs
+	Description: SocialCrumbs is a beautiful social-feed theme for WordPress that works with ifttt recipes.
+	Author: @ademilter
+	Author URI: https://github.com/ademilter
+	Version: 1.0
+	License: The MIT License (MIT)
+	License URI: https://github.com/ademilter/s-report/blob/master/License
+*/
+//
+// OPTION
+@import "option/value";
+//
+// HELPER
+@import "helper/normalize";
+@import "helper/formalize";
+//
+// COMPONENT
+@import "component/post";
+
+//
+// GLOBAL
+
+html {
+    background-color: #ddd;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    transition: $transition;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    @media (min-width: 768px) {
+        padding: 10px;
+    }
+}
