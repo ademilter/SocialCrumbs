@@ -1,13 +1,15 @@
 <?php
 
-// --------------------------------------------------------
-// Translation
+/**
+ * Theme Translation
+ */
 
 load_theme_textdomain('s-report', get_template_directory() . '/languages');
 
 
-// --------------------------------------------------------
-// Translation
+/**
+ * IFTTT Data to Object
+ */
 
 
 function tokenText($str)
@@ -21,8 +23,9 @@ function tokenText($str)
     return $object;
 }
 
-// --------------------------------------------------------
-// Script
+/**
+ * Get Theme Script
+ */
 
 function page_js_files()
 {
