@@ -7,7 +7,7 @@ SocialCrumbs is a social activity feed theme for WordPress that works with [iftt
 ###Installation
 1. Download the theme and activate it.
 2. Sign up for [ifttt](http://ifttt.com/) if you haven't already.
-3. [Choose] from the recipes below (You'll be asked for permission before using).
+3. Choose from the recipes below (You'll be asked for permission before using).
 
 ###Notes
 "Most IF Recipes check for new Trigger data every 15 minutes. Some Recipes run even faster." -ifttt team
