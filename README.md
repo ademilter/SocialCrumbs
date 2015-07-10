@@ -1,5 +1,5 @@
 # SocialCrumbs
-SocialCrumbs is social-feed theme for WordPress that works with [ifttt](http://ifttt.com/) recipes.
+SocialCrumbs is a social activity feed theme for WordPress that works with [ifttt](http://ifttt.com/) recipes.
 
 ###Demo
 [http://adem.social](http://adem.social/)
