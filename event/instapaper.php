@@ -11,7 +11,6 @@
         $eventUrl = $content["URL"];
         $eventContent = $content["Description"];
 
-
     } elseif ($eventTag == 'save') {
 
         // Data [Title, Description, URL, CreatedAt]
@@ -20,7 +19,6 @@
         $eventTitle = $content["Title"];
         $eventUrl = $content["URL"];
         $eventContent = $content["Description"];
-
 
     } elseif ($eventTag == 'highlight') {
 
@@ -32,6 +30,5 @@
         $eventContent = $content["Description"];
 
     }
-
 
 }

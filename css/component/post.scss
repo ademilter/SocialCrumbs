@@ -111,7 +111,14 @@
     &.post-photo {
         .post-content {
             padding: 0;
-            //padding: 10px 10px 0;
+
+            .post-content_title {
+                //padding: $offset-medium;
+
+                span {
+                    //font-weight: 400;
+                }
+            }
         }
 
         .post-footer {

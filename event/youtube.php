@@ -11,7 +11,6 @@
         $eventUrl = $content["Url"];
         $eventContent = $content["Description"];
 
-
     } elseif ($eventTag == 'like') {
 
         // Data [Title, Description, Url, EmbedCode, LikedAt]
@@ -22,6 +21,5 @@
         $eventContent = $content["Description"];
 
     }
-
 
 }

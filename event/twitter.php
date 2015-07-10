@@ -2,7 +2,6 @@
 
     $eventType = "text";
 
-
     if ($eventTag == 'tweet') {
 
         // Data [Text, UserName, LinkToTweet, CreatedAt, TweetEmbedCode]
@@ -22,6 +21,5 @@
         $eventContent = $content["Text"];
 
     }
-
 
 }

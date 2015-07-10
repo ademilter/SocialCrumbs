@@ -1,22 +1,25 @@
 <?php if ($eventCategory == 'lastfm') {
 
+    $eventType = "photo";
 
     if ($eventTag == 'scrobbled') {
 
-        // Data [Artist, TrackName, AlbumName, TrackUrl, AlbumImageUrl, PlayedDate]
+        // Data [Artist, TrackName, TrackUrl, AlbumImageUrl, PlayedDate]
 
         $eventIconStatus = "listen";
-        $eventTitle = sprintf(__('Listen a new music', 's-report'));
+        $eventTitle = $content["Artist"] . ' - ' . $content["TrackName"];
+        $eventUrl = $content["TrackUrl"];
+        $eventContent = $content["AlbumImageUrl"];
 
-        ob_start(); ?>
-        <img src="<?php echo $content["AlbumImageUrl"] ?>" alt=""/>
-        <figcaption><?php echo $content["Artist"] . $content["TrackName"] ?></figcaption>
+    } elseif ($eventTag == 'like') {
 
-        <?php
-        $eventContent = ob_get_clean();
+        // Data [Artist, TrackName, TrackUrl, AlbumImageUrl, LovedDate]
 
+        $eventIconStatus = "like";
+        $eventTitle = $content["Artist"] . ' - ' . $content["TrackName"];
+        $eventUrl = $content["TrackUrl"];
+        $eventContent = $content["AlbumImageUrl"];
 
     }
-
 
 }

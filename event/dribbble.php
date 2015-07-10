@@ -11,7 +11,6 @@
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryImageUrl"];
 
-
     } elseif ($eventTag == 'shot') {
 
         // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
@@ -22,6 +21,5 @@
         $eventContent = $content["EntryImageUrl"];
 
     }
-
 
 }

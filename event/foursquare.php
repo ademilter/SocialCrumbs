@@ -7,11 +7,10 @@
         // Data [Shout, VenueName, VenueUrl, VenueMapImageUrl, CheckinDate]
 
         $eventIconStatus = "checkin";
-        $eventTitle = $content["Shout"];
+        $eventTitle = $content["Shout"] . ' @' . $content["VenueName"];
         $eventUrl = $content["VenueUrl"];
         $eventContent = $content["VenueMapImageUrl"];
 
     }
-
 
 }

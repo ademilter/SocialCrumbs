@@ -20,7 +20,6 @@
         $eventUrl = $content["Url"];
         $eventContent = $content["ImageThumbnailURL"];
 
-
     } elseif ($eventTag == 'like-photo') {
 
         // Data [Caption, Url, SourceUrl, Username, CreatedAt, EmbedCode]
@@ -29,7 +28,6 @@
         $eventTitle = $content["Caption"];
         $eventUrl = $content["Url"];
         $eventContent = $content["SourceUrl"];
-
 
     } elseif ($eventTag == 'like-video') {
 
@@ -40,8 +38,6 @@
         $eventUrl = $content["Url"];
         $eventContent = $content["ImageThumbnailURL"];
 
-
     }
-
 
 }

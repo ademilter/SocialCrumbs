@@ -20,6 +20,7 @@
                 get_cat_ID('instagram'),
                 get_cat_ID('vimeo'),
                 get_cat_ID('youtube'),
+                get_cat_ID('lastfm'),
                 get_cat_ID('github')
             );
 
@@ -55,6 +56,7 @@
                 include "event/github.php";
                 include "event/instagram.php";
                 include "event/instapaper.php";
+                include "event/lastfm.php";
                 include "event/soundcloud.php";
                 include "event/twitter.php";
                 include "event/vimeo.php";
