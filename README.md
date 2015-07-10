@@ -1,7 +1,7 @@
 ###Demo
 [http://adem.social](http://adem.social/)
 
-[![SocialCrumbs wordpress theme](http://d.pr/i/11xR1+)](http://d.pr/i/fZ2v)
+[![SocialCrumbs wordpress theme](http://d.pr/i/11xR1+)](http://adem.social/)
 
 ###Installation
 1. Download the theme and activate it.
