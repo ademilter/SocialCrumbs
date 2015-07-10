@@ -1,7 +1,18 @@
 # SocialCrumbs
-SocialCrumbs is social-feed theme for WordPress that works with ifttt recipes.
+SocialCrumbs is social-feed theme for WordPress that works with [ifttt](http://ifttt.com/) recipes.
 
-## Recipes
+###Demo
+[http://adem.social](http://adem.social/)
+
+###Installation
+1. Download the theme and activate it.
+2. Sign up for [ifttt](http://ifttt.com/) if you haven't already.
+3. [Choose] from the recipes below (You'll be asked for permission before using).
+
+###Notes
+"Most IF Recipes check for new Trigger data every 15 minutes. Some Recipes run even faster." -ifttt team
+
+###Recipes
 - [x] dribbble-like https://ifttt.com/recipes/189352
 - [x] dribbble-shot https://ifttt.com/recipes/189361
 - [x] instapaper-like https://ifttt.com/recipes/190227
