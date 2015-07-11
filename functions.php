@@ -77,67 +77,62 @@ if ( !function_exists( 'footer_code' ) ) {
 
 function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag ) {
     ?>
-    <article <?php post_class( 'post-' . $eventType . ' ' . 'post-' . $eventIconStatus ); ?>>
+    <div class="post-content">
 
-        <div class="post-content">
-
-            <?php
-            if ( $eventType == "photo" ) {
-                ?>
-                <img class="post-content_photo"
-                     src="<?php echo esc_url( $eventContent ); ?>"
-                     alt="<?php echo esc_attr( $eventTitle ); ?>"
-                     draggable="false"/>
-                <?php
-            }
-            if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") {
-                ?>
-                <h3 class="post-content_title">
-                    <?php echo esc_html( $eventTitle ); ?>
-                </h3>
-                <?php
-            }
-
-            if ( $eventType == "text" ) {
-                ?>
-                <p class="post-content_summary">
-                    <?php
-                    if ( !empty( $eventContent ) ) {
-                        echo wp_kses_post( $eventContent );
-                    } else {
-                        the_content();
-                    }
-                    ?>
-                </p>
-                <?php
-            }
+        <?php
+        if ( $eventType == "photo" ) {
             ?>
+            <img class="post-content_photo"
+                 src="<?php echo esc_url( $eventContent ); ?>"
+                 alt="<?php echo esc_attr( $eventTitle ); ?>"
+                 draggable="false"/>
+            <?php
+        }
+        if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") {
+            ?>
+            <h3 class="post-content_title">
+                <?php echo esc_html( $eventTitle ); ?>
+            </h3>
+            <?php
+        }
 
+        if ( $eventType == "text" ) {
+            ?>
+            <p class="post-content_summary">
+                <?php
+                if ( !empty( $eventContent ) ) {
+                    echo wp_kses_post( $eventContent );
+                } else {
+                    the_content();
+                }
+                ?>
+            </p>
+            <?php
+        }
+        ?>
+
+    </div>
+
+    <footer class="post-footer">
+
+        <a class="post-time" href="<?php echo esc_url( $eventUrl ); ?>">
+            <time><?php echo esc_html( $eventTimeStamp ); ?></time>
+        </a>
+
+        <div class="post-icons">
+            <a class="post_icon post_icon--action" href="">
+                <svg class="icon icon--solid">
+                    <use xlink:href="#icon-<?php echo esc_attr( $eventIconStatus ); ?>"></use>
+                </svg>
+            </a>
+            <a class="post_icon post_icon--source" href="">
+                <svg class="icon">
+                    <use xlink:href="#icon-<?php echo esc_attr( $eventCategory ); ?>"></use>
+                </svg>
+            </a>
         </div>
 
-        <footer class="post-footer">
-
-            <a class="post-time" href="<?php echo esc_url( $eventUrl ); ?>">
-                <time><?php echo esc_html( $eventTimeStamp ); ?></time>
-            </a>
-
-            <div class="post-icons">
-                <a class="post_icon post_icon--action" href="">
-                    <svg class="icon icon--solid">
-                        <use xlink:href="#icon-<?php echo esc_attr( $eventIconStatus ); ?>"></use>
-                    </svg>
-                </a>
-                <a class="post_icon post_icon--source" href="">
-                    <svg class="icon">
-                        <use xlink:href="#icon-<?php echo esc_attr( $eventCategory ); ?>"></use>
-                    </svg>
-                </a>
-            </div>
-
-        </footer>
-
-
-    </article>
+    </footer>
 
     <?php
 }

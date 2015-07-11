@@ -1,6 +1,6 @@
 <?php
 
-$eventType = "";
+$format = "";
 $eventTitle = "";
 $eventContent = "";
 $eventUrl = "";
@@ -37,5 +37,10 @@ include "event/twitter.php";
 include "event/vimeo.php";
 include "event/youtube.php";
 
-// Event Template
-eventTemplateSidebar($eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag);
+?>
+<article <?php post_class( 'post-' . $format . ' ' . 'post-' . $eventIconStatus ); ?>>
+	<?php
+	// Event Template
+	eventTemplateSidebar( $format, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag );
+	?>
+</article>
