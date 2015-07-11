@@ -7,8 +7,6 @@
 
             <?php
 
-            include "activity-template.php";
-
             $Cats = array(
                 get_cat_ID('codepen'),
                 get_cat_ID('delicious'),
