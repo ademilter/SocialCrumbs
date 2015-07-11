@@ -1,13 +1,12 @@
 <?php if ($eventCategory == 'twitter') {
 
-    $eventType = "text";
-
     if ($eventTag == 'tweet') {
 
         // Data [Text, UserName, LinkToTweet, CreatedAt, TweetEmbedCode]
 
+        $eventType = "text";
         $eventIconStatus = "write";
-        $eventTitle = sprintf(__('Tweeted', 's-report'));
+        $eventTitle = $content["UserName"];
         $eventUrl = $content["LinkToTweet"];
         $eventContent = $content["Text"];
 
@@ -15,8 +14,9 @@
 
         // Data [Text, UserName, LinkToTweet, FirstLinkUrl, CreatedAt, TweetEmbedCode]
 
+        $eventType = "text";
         $eventIconStatus = "favorite";
-        $eventTitle = sprintf(__('Faved <strong>%s</strong>\'s tweet', 's-report'), $content["UserName"]);
+        $eventTitle = '<span>I faved tweet;</span>' . $content["UserName"];
         $eventUrl = $content["LinkToTweet"];
         $eventContent = $content["Text"];
 

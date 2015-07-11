@@ -429,19 +429,21 @@ textarea {
     z-index: 10;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); }
   .post-content {
-    padding: 20px;
-    font-family: 'Mercury SSm A', 'Mercury SSm B';
-    font-weight: 400;
-    font-style: normal; }
+    padding: 20px; }
     .post-content_photo {
       max-width: 100%; }
     .post-content_title {
       cursor: default;
       font-size: 16px; }
+      .post-content_title span {
+        display: block;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.4); }
     .post-content_summary {
-      cursor: default;
       margin-top: 8px;
-      word-break: break-word; }
+      font-family: 'Mercury SSm A', 'Mercury SSm B', Georgia, Times, 'Times New Roman', serif;
+      word-break: break-word;
+      cursor: default; }
     .post-content_link {
       margin-top: 10px;
       text-decoration: underline;
@@ -523,6 +525,8 @@ textarea {
   .post.category-github {
     color: white;
     background-color: #333; }
+    .post.category-github .post-content_title span {
+      color: rgba(255, 255, 255, 0.4); }
     .post.category-github .post-content_summary {
       color: rgba(255, 255, 255, 0.6); }
     .post.category-github .post-footer:before {
@@ -530,9 +534,8 @@ textarea {
 
 html {
   background-color: #ddd;
-  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  font-family: 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-style: normal;
   line-height: 1.5;
   font-size: 16px; }
 
@@ -543,9 +546,7 @@ html {
   fill: currentColor; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: 700;
-  font-style: normal; }
+  font-weight: 700; }
 
 a {
   color: inherit;

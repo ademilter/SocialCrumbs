@@ -1,22 +1,12 @@
 <?php if ($eventCategory == 'vimeo') {
 
-    $eventType = "link";
-
-    if ($eventTag == 'later') {
-
-        // Data [Title, Caption, Url, OwnerName, OwnerUrl, EmbedCode, UploadedAt]
-
-        $eventIconStatus = "bookmark";
-        $eventTitle = $content["Title"];
-        $eventUrl = $content["Url"];
-        $eventContent = $content["Caption"];
-
-    } elseif ($eventTag == 'like') {
+    if ($eventTag == 'like') {
 
         // Data [Title, Caption, Url, OwnerName, OwnerUrl, EmbedCode, UploadedAt, LikedAt]
 
+        $eventType = "link";
         $eventIconStatus = "like";
-        $eventTitle = $content["Title"];
+        $eventTitle = '<span>I liked video;</span>' . $content["Title"];
         $eventUrl = $content["Url"];
         $eventContent = $content["Caption"];
 

@@ -7,7 +7,7 @@
         // Data [Title, Description, URL, CreatedAt]
 
         $eventIconStatus = "like";
-        $eventTitle = $content["Title"];
+        $eventTitle = '<span>I liked;</span>' . $content["Title"];
         $eventUrl = $content["URL"];
         $eventContent = $content["Description"];
 
@@ -16,7 +16,7 @@
         // Data [Title, Description, URL, CreatedAt]
 
         $eventIconStatus = "bookmark";
-        $eventTitle = $content["Title"];
+        $eventTitle = '<span>I bookmark it;</span>' . $content["Title"];
         $eventUrl = $content["URL"];
         $eventContent = $content["Description"];
 
@@ -25,7 +25,7 @@
         // Data [Title, Description, URL, CreatedAt]
 
         $eventIconStatus = "favorite";
-        $eventTitle = $content["Title"];
+        $eventTitle = '<span>I highlight it;</span>' . $content["Title"];
         $eventUrl = $content["URL"];
         $eventContent = $content["Description"];
 

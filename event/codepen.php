@@ -1,17 +1,15 @@
 <?php if ($eventCategory == 'codepen') {
 
-    $eventType = "photo";
-
     if ($eventTag == 'pen') {
 
         // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
 
+        $eventType = "link";
         $eventIconStatus = "write";
-        $eventTitle = $content["EntryTitle"];
+        $eventTitle = '<span>I created pen;</span>' . $content["EntryTitle"];
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryImageUrl"];
 
     }
-
 
 }

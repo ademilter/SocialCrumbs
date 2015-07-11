@@ -16,7 +16,7 @@
         // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
 
         $eventIconStatus = "favorite";
-        $eventTitle = $content["EntryTitle"];
+        $eventTitle = '<span>I starred;</span>' . $content["EntryTitle"];
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryContent"];
 

@@ -1,11 +1,10 @@
 <?php if ($eventCategory == 'foursquare') {
 
-    $eventType = "photo";
-
     if ($eventTag == 'checkin') {
 
         // Data [Shout, VenueName, VenueUrl, VenueMapImageUrl, CheckinDate]
 
+        $eventType = "photo";
         $eventIconStatus = "checkin";
         $eventTitle = $content["Shout"] . ' @' . $content["VenueName"];
         $eventUrl = $content["VenueUrl"];

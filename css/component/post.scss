@@ -26,9 +26,6 @@
 
     &-content {
         padding: $offset-medium;
-        font-family: 'Mercury SSm A', 'Mercury SSm B';
-        font-weight: 400;
-        font-style: normal;
 
         &_photo {
             max-width: 100%;
@@ -37,12 +34,19 @@
         &_title {
             cursor: default;
             font-size: 16px;
+
+            span {
+                display: block;
+                font-weight: 400;
+                color: rgba(black, .4);
+            }
         }
 
         &_summary {
-            cursor: default;
             margin-top: 8px;
+            font-family: 'Mercury SSm A', 'Mercury SSm B', Georgia, Times, 'Times New Roman', serif;
             word-break: break-word;
+            cursor: default;
         }
 
         &_link {
@@ -111,14 +115,6 @@
     &.post-photo {
         .post-content {
             padding: 0;
-
-            .post-content_title {
-                //padding: $offset-medium;
-
-                span {
-                    //font-weight: 400;
-                }
-            }
         }
 
         .post-footer {
@@ -185,6 +181,12 @@
     &.category-github {
         color: white;
         background-color: #333;
+
+        .post-content_title {
+            span {
+                color: rgba(white, .4);
+            }
+        }
 
         .post-content_summary {
             color: rgba(white, .6);

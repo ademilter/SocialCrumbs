@@ -5,7 +5,6 @@
 
             <div class="grid-sizer"></div>
 
-
             <?php
 
             include "activity-template.php";
@@ -49,7 +48,6 @@
                 $eventTag = $tags[0]->slug;
                 $content = tokenText(get_the_content());
 
-
                 // Event Recipes
                 include "event/codepen.php";
                 include "event/delicious.php";
@@ -64,26 +62,22 @@
                 include "event/vimeo.php";
                 include "event/youtube.php";
 
-
                 // Event Template
                 eventTemplateSidebar($eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag);
-
 
             endwhile; ?>
         </div>
 
         <nav class="TimelineNav">
             <?php next_posts_link(__('Older posts', 's-report')); ?>
-            <?php //previous_posts_link(__('Newer posts', 's-report'));
+            <?php previous_posts_link(__('Newer posts', 's-report'));
             ?>
         </nav>
-
 
         <?php endif;
         wp_reset_postdata();
 
         ?>
     </div>
-
 
 <?php get_footer(); ?>

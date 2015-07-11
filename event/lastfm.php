@@ -1,13 +1,13 @@
 <?php if ($eventCategory == 'lastfm') {
 
-    $eventType = "photo";
+    $eventType = "link";
 
     if ($eventTag == 'scrobbled') {
 
         // Data [Artist, TrackName, TrackUrl, AlbumImageUrl, PlayedDate]
 
         $eventIconStatus = "listen";
-        $eventTitle = $content["Artist"] . ' - ' . $content["TrackName"];
+        $eventTitle = '<span>I listen song;</span>' . $content["Artist"] . ' - ' . $content["TrackName"];
         $eventUrl = $content["TrackUrl"];
         $eventContent = $content["AlbumImageUrl"];
 
@@ -16,7 +16,7 @@
         // Data [Artist, TrackName, TrackUrl, AlbumImageUrl, LovedDate]
 
         $eventIconStatus = "like";
-        $eventTitle = $content["Artist"] . ' - ' . $content["TrackName"];
+        $eventTitle = '<span>I liked song;</span>' . $content["Artist"] . ' - ' . $content["TrackName"];
         $eventUrl = $content["TrackUrl"];
         $eventContent = $content["AlbumImageUrl"];
 
