@@ -8,10 +8,9 @@
 <!-- facebook thumbnail -->
 <link rel="dns-prefetch" href="//sphotos.ak.fbcdn.net">
 <!-- dribbble thumbnail -->
-<link rel="dns-prefetch" href="https://d13yacurqjgara.cloudfront.net">
+<link rel="dns-prefetch" href="//d13yacurqjgara.cloudfront.net">
 <!-- instagram thumbnail -->
 <link rel="dns-prefetch" href="//scontent.cdninstagram.com">
-<link rel="dns-prefetch" href="//distilleryimage7.s3.amazonaws.com">
 <!-- lastfm thumbnail -->
 <link rel="dns-prefetch" href="//userserve-ak.last.fm">
 <!-- pinterest thumbnail -->
