@@ -16,7 +16,7 @@
 
         $eventType = "text";
         $eventIconStatus = "favorite";
-        $eventTitle = '<span>I faved tweet;</span>' . $content["UserName"];
+        $eventTitle = '<span>I faved tweet;</span>';
         $eventUrl = $content["LinkToTweet"];
         $eventContent = $content["Text"];
 

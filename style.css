@@ -437,6 +437,7 @@ textarea {
       font-size: 16px; }
       .post-content_title span {
         display: block;
+        font-size: 14px;
         font-weight: 400;
         color: rgba(0, 0, 0, 0.4); }
     .post-content_summary {
@@ -525,8 +526,10 @@ textarea {
   .post.category-github {
     color: white;
     background-color: #333; }
-    .post.category-github .post-content_title span {
-      color: rgba(255, 255, 255, 0.4); }
+    .post.category-github .post-content_title {
+      word-wrap: break-word; }
+      .post.category-github .post-content_title span {
+        color: rgba(255, 255, 255, 0.4); }
     .post.category-github .post-content_summary {
       color: rgba(255, 255, 255, 0.6); }
     .post.category-github .post-footer:before {

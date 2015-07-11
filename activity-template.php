@@ -16,7 +16,7 @@ function eventTemplateSidebar($eventType, $eventTitle, $eventContent, $eventUrl,
                      draggable="false"/>
             <?php } ?>
 
-            <?php if ($eventType == "link") { ?>
+            <?php if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") { ?>
                 <h3 class="post-content_title">
                     <?php echo $eventTitle; ?>
                 </h3>

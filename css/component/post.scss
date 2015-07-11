@@ -37,6 +37,7 @@
 
             span {
                 display: block;
+                font-size: 14px;
                 font-weight: 400;
                 color: rgba(black, .4);
             }
@@ -183,6 +184,8 @@
         background-color: #333;
 
         .post-content_title {
+            word-wrap: break-word;
+
             span {
                 color: rgba(white, .4);
             }

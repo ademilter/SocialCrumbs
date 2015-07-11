@@ -1,22 +1,12 @@
 <?php if ($eventCategory == 'github') {
 
-    $eventType = "link";
-
-    if ($eventTag == 'repository') {
-
-        // Data [RepositoryName, RepositoryDescription, RepositoryURL, CloneURL, OwnerUsername, OwnerAvatarURL, CreatedAt]
-
-        $eventIconStatus = "add";
-        $eventTitle = $content["EntryTitle"];
-        $eventUrl = $content["RepositoryURL"];
-        $eventContent = $content["RepositoryDescription"];
-
-    } elseif ($eventTag == 'starred') {
+    if ($eventTag == 'starred') {
 
         // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
 
+        $eventType = "link";
         $eventIconStatus = "favorite";
-        $eventTitle = '<span>I starred;</span>' . $content["EntryTitle"];
+        $eventTitle = '<span>I starred;</span>' . $content["EntryUrl"];
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryContent"];
 
