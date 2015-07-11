@@ -83,33 +83,37 @@ if (!function_exists('footer_code')) {
 
 function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag ) {
     ?>
-
     <article <?php post_class( 'post-' . $eventType . ' ' . 'post-' . $eventIconStatus ); ?>>
-
 
         <div class="post-content">
 
-            <?php if ( $eventType == "photo" ) { ?>
+            <?php
+            if ( $eventType == "photo" ) {
+                ?>
                 <img class="post-content_photo"
                      src="<?php echo $eventContent ?>"
                      alt="<?php echo $eventTitle ?>"
                      draggable="false"/>
-            <?php } ?>
-
-            <?php if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") { ?>
+                <?php
+            }
+            if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") {
+                ?>
                 <h3 class="post-content_title">
                     <?php echo $eventTitle; ?>
                 </h3>
-            <?php } ?>
+                <?php
+            }
 
-            <?php if ($eventType == "text") { ?>
+            if ($eventType == "text") {
+                ?>
                 <p class="post-content_summary">
                     <?php echo $eventContent; ?>
                 </p>
-            <?php } ?>
+                <?php
+            }
+            ?>
 
         </div>
-
 
         <footer class="post-footer">
 
