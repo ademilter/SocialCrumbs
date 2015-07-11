@@ -32,6 +32,7 @@
   - [x] [Check-in](https://ifttt.com/recipes/189360)
 - Github
   - [x] [Repo Star](https://ifttt.com/recipes/189334)
+  - [ ] Repo Created
 - Vimeo
   - [x] [Video Like](https://ifttt.com/recipes/189329)
 - Youtube
