@@ -91,15 +91,15 @@ function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl
             if ( $eventType == "photo" ) {
                 ?>
                 <img class="post-content_photo"
-                     src="<?php echo $eventContent ?>"
-                     alt="<?php echo $eventTitle ?>"
+                     src="<?php echo esc_url( $eventContent ); ?>"
+                     alt="<?php echo esc_attr( $eventTitle ); ?>"
                      draggable="false"/>
                 <?php
             }
             if (($eventType == "text" && $eventIconStatus == "favorite") || $eventType == "link") {
                 ?>
                 <h3 class="post-content_title">
-                    <?php echo $eventTitle; ?>
+                    <?php echo esc_html( $eventTitle ); ?>
                 </h3>
                 <?php
             }
@@ -107,7 +107,7 @@ function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl
             if ($eventType == "text") {
                 ?>
                 <p class="post-content_summary">
-                    <?php echo $eventContent; ?>
+                    <?php echo wp_kses_post( $eventContent ); ?>
                 </p>
                 <?php
             }
@@ -117,19 +117,19 @@ function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl
 
         <footer class="post-footer">
 
-            <a class="post-time" href="<?php echo $eventUrl; ?>">
-                <time><?php echo $eventTimeStamp; ?></time>
+            <a class="post-time" href="<?php echo esc_url( $eventUrl ); ?>">
+                <time><?php echo esc_html( $eventTimeStamp ); ?></time>
             </a>
 
             <div class="post-icons">
                 <a class="post_icon post_icon--action" href="">
                     <svg class="icon icon--solid">
-                        <use xlink:href="#icon-<?php echo $eventIconStatus; ?>"></use>
+                        <use xlink:href="#icon-<?php echo esc_attr( $eventIconStatus ); ?>"></use>
                     </svg>
                 </a>
                 <a class="post_icon post_icon--source" href="">
                     <svg class="icon">
-                        <use xlink:href="#icon-<?php echo $eventCategory; ?>"></use>
+                        <use xlink:href="#icon-<?php echo esc_attr( $eventCategory ); ?>"></use>
                     </svg>
                 </a>
             </div>
