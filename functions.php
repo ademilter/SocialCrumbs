@@ -202,38 +202,22 @@ function socialcrumbs_the_content( $content ) {
         if ( has_tag( 'share-photo' ) ) {
 
             // Data [Caption, Url, SourceUrl, CreatedAt, EmbedCodee]
-
-            $eventIconStatus = "add";
-            $eventTitle = $tokens["Caption"];
-            $eventUrl = $tokens["Url"];
-            $eventContent = $tokens["SourceUrl"];
+            $content = $tokens["SourceUrl"];
 
         } elseif ( has_tag( 'share-video' ) ) {
 
             // Data [Caption, URL, VideoSourceURL, ImageThumbnailURL, CreatedAt, EmbedCode]
-
-            $eventIconStatus = "add";
-            $eventTitle = $tokens["Caption"];
-            $eventUrl = $tokens["Url"];
-            $eventContent = $tokens["ImageThumbnailURL"];
+            $content = $tokens["ImageThumbnailURL"];
 
         } elseif ( has_tag( 'like-photo') ) {
 
             // Data [Caption, Url, SourceUrl, Username, CreatedAt, EmbedCode]
-
-            $eventIconStatus = "like";
-            $eventTitle = $tokens["Caption"];
-            $eventUrl = $tokens["Url"];
-            $eventContent = $tokens["SourceUrl"];
+            $content = $tokens["SourceUrl"];
 
         } elseif ( has_tag( 'like-video') ) {
 
             // Data [Caption, URL, VideoSourceURL, ImageThumbnailURL, Username, CreatedAt, EmbedCode]
-
-            $eventIconStatus = "like";
-            $eventTitle = $tokens["Caption"];
-            $eventUrl = $tokens["Url"];
-            $eventContent = $tokens["ImageThumbnailURL"];
+            $content = $tokens["ImageThumbnailURL"];
 
         }
     }
