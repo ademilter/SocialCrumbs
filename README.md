@@ -49,5 +49,5 @@
 - [ ] tumblr-like
 
 ###Using the theme list
-- [adem.social](http://adem.social/)
+- **[adem.social](http://adem.social/)**
 - [Add link](https://github.com/ademilter/socialcrumbs/issues/1)
