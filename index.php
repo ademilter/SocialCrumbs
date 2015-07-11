@@ -19,11 +19,20 @@
                     // connect, purchase, link, calendar, like, favorite, bookmark, watch, listen, add, write, checkin
                     $eventIconStatus = "";
                     $postCategories = get_the_category();
-                    $eventCategory = $postCategories[0]->slug;
+                    $eventCategory = '';
+                    if ( !empty( $postCategories[0] ) ) {
+                        $eventCategory = $postCategories[0]->slug;
+                    }
                     $postTags = get_the_tags();
-                    $tags = array_values($postTags);
-                    $eventTag = $tags[0]->slug;
-                    $content = tokenText(get_the_content());
+                    $tags = array();
+                    if ( is_array( $postTags ) ) {
+                        $tags = array_values($postTags);
+                    }
+                    $eventTag = '';
+                    if ( !empty( $tags ) ) {
+                        $eventTag = $tags[0]->slug;
+                    }
+                    $content = tokenText( get_the_content() );
 
                     // Event Recipes
                     include "event/codepen.php";
