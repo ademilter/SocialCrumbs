@@ -184,3 +184,7 @@ function socialcrumbs_head() {
 }
 add_action( 'wp_head', 'socialcrumbs_head' );
 
+function socialcrumbs_analytics() {
+    get_template_part( 'analyticstracking' );
+}
+add_action( 'wp_head', 'socialcrumbs_analytics' );
