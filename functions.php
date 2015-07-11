@@ -98,10 +98,16 @@ function eventTemplateSidebar( $eventType, $eventTitle, $eventContent, $eventUrl
                 <?php
             }
 
-            if ($eventType == "text") {
+            if ( $eventType == "text" ) {
                 ?>
                 <p class="post-content_summary">
-                    <?php echo wp_kses_post( $eventContent ); ?>
+                    <?php
+                    if ( !empty( $eventContent ) ) {
+                        echo wp_kses_post( $eventContent );
+                    } else {
+                        the_content();
+                    }
+                    ?>
                 </p>
                 <?php
             }
@@ -188,3 +194,49 @@ function socialcrumbs_analytics() {
     get_template_part( 'analyticstracking' );
 }
 add_action( 'wp_head', 'socialcrumbs_analytics' );
+
+
+function socialcrumbs_the_content( $content ) {
+    $tokens = tokenText( get_the_content() );
+    if ( in_category( get_cat_ID('instagram') ) ) {
+        if ( has_tag( 'share-photo' ) ) {
+
+            // Data [Caption, Url, SourceUrl, CreatedAt, EmbedCodee]
+
+            $eventIconStatus = "add";
+            $eventTitle = $tokens["Caption"];
+            $eventUrl = $tokens["Url"];
+            $eventContent = $tokens["SourceUrl"];
+
+        } elseif ( has_tag( 'share-video' ) ) {
+
+            // Data [Caption, URL, VideoSourceURL, ImageThumbnailURL, CreatedAt, EmbedCode]
+
+            $eventIconStatus = "add";
+            $eventTitle = $tokens["Caption"];
+            $eventUrl = $tokens["Url"];
+            $eventContent = $tokens["ImageThumbnailURL"];
+
+        } elseif ( has_tag( 'like-photo') {
+
+            // Data [Caption, Url, SourceUrl, Username, CreatedAt, EmbedCode]
+
+            $eventIconStatus = "like";
+            $eventTitle = $tokens["Caption"];
+            $eventUrl = $tokens["Url"];
+            $eventContent = $tokens["SourceUrl"];
+
+        } elseif ( has_tag( 'like-video') {
+
+            // Data [Caption, URL, VideoSourceURL, ImageThumbnailURL, Username, CreatedAt, EmbedCode]
+
+            $eventIconStatus = "like";
+            $eventTitle = $tokens["Caption"];
+            $eventUrl = $tokens["Url"];
+            $eventContent = $tokens["ImageThumbnailURL"];
+
+        }
+    }
+    return $content;
+}
+add_filter( 'the_content', 'socialcrumbs_the_content' );

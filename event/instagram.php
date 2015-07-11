@@ -9,7 +9,7 @@
         $eventIconStatus = "add";
         $eventTitle = $content["Caption"];
         $eventUrl = $content["Url"];
-        $eventContent = $content["SourceUrl"];
+        //$eventContent = $content["SourceUrl"];
 
     } elseif ($eventTag == 'share-video') {
 
@@ -18,7 +18,7 @@
         $eventIconStatus = "add";
         $eventTitle = $content["Caption"];
         $eventUrl = $content["Url"];
-        $eventContent = $content["ImageThumbnailURL"];
+        //$eventContent = $content["ImageThumbnailURL"];
 
     } elseif ($eventTag == 'like-photo') {
 
@@ -27,7 +27,7 @@
         $eventIconStatus = "like";
         $eventTitle = $content["Caption"];
         $eventUrl = $content["Url"];
-        $eventContent = $content["SourceUrl"];
+        //$eventContent = $content["SourceUrl"];
 
     } elseif ($eventTag == 'like-video') {
 
@@ -36,7 +36,7 @@
         $eventIconStatus = "like";
         $eventTitle = $content["Caption"];
         $eventUrl = $content["Url"];
-        $eventContent = $content["ImageThumbnailURL"];
+        //$eventContent = $content["ImageThumbnailURL"];
 
     }
 
