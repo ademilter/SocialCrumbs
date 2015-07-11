@@ -14,6 +14,7 @@
 ###Recipes
 - [x] dribbble-like https://ifttt.com/recipes/189352
 - [x] dribbble-shot https://ifttt.com/recipes/189361
+- [x] dribbble-follow https://ifttt.com/recipes/306730
 - [x] instapaper-like https://ifttt.com/recipes/190227
 - [x] instapaper-save https://ifttt.com/recipes/189339
 - [x] instagram-photo-share https://ifttt.com/recipes/189365
