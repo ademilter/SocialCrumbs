@@ -64,6 +64,19 @@
   - [ ] Post Video
   - [ ] Post Audio
   - [ ] Post Like
+- 500px
+  - [ ] Photo Upload
+- Bitly
+  - [ ] New Bitmark
+- Square
+  - [ ] New Payment
+- Stripe
+  - [ ] New Payment
+- Reddit
+  - [ ] New Post
+  - [ ] New Comment
+  - [ ] Upvoted
+  - [ ] Post Save
 
 ###Using the theme list
 - **[adem.social](http://adem.social/)**
