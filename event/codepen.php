@@ -5,7 +5,7 @@
         // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
 
         $eventType = "link";
-        $eventIconStatus = "write";
+        $eventIconStatus = "add";
         $eventTitle = '<span>I created pen;</span>' . $content["EntryTitle"];
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryImageUrl"];

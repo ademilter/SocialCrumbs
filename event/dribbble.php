@@ -20,16 +20,6 @@
         $eventUrl = $content["EntryUrl"];
         $eventContent = $content["EntryImageUrl"];
 
-    } elseif ($eventTag == 'follow') {
-
-        // Data [EntryTitle, EntryUrl, EntryAuthor, EntryContent, EntryImageUrl, EntryPublished, FeedTitle, FeedUrl]
-
-        $eventType = "link";
-        $eventIconStatus = "follow";
-        $eventTitle = '<span>I followed;</span>' . $content["EntryAuthor"];
-        $eventUrl = $content["EntryUrl"];
-        $eventContent = $content["EntryImageUrl"];
-
     }
 
 }

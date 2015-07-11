@@ -5,7 +5,7 @@
         // Data [Text, UserName, LinkToTweet, CreatedAt, TweetEmbedCode]
 
         $eventType = "text";
-        $eventIconStatus = "write";
+        $eventIconStatus = "quote";
         $eventTitle = $content["UserName"];
         $eventUrl = $content["LinkToTweet"];
         $eventContent = $content["Text"];

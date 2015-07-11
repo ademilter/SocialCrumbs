@@ -5,7 +5,7 @@
         // Data [Title, Description, Url, EmbedCode, LikedAt]
 
         $eventType = "link";
-        $eventIconStatus = "thumbs-up";
+        $eventIconStatus = "like";
         $eventTitle = '<span>I liked video;</span>' . $content["Title"];
         $eventUrl = $content["Url"];
         $eventContent = $content["Description"];
