@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
     <div class="container">
         <div class="Timeline">
@@ -8,18 +10,19 @@
             <?php
 
             if ( have_posts() ) {
-                while (have_posts()) {
+                while ( have_posts() ) {
                     the_post();
-
-                    get_template_part( 'content', get_post_format() );
+                    $format = get_post_format();
+                    get_template_part( 'content', $format );
 
                 }
                 ?>
             </div>
 
             <nav class="TimelineNav">
-                <?php next_posts_link(__('Older posts', 's-report')); ?>
-                <?php previous_posts_link(__('Newer posts', 's-report'));
+                <?php
+                next_posts_link( __( 'Older posts', 's-report' ) );
+                previous_posts_link( __( 'Newer posts', 's-report' ) );
                 ?>
             </nav>
 
@@ -29,4 +32,5 @@
         ?>
     </div>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
