@@ -198,7 +198,7 @@ add_action( 'wp_head', 'socialcrumbs_analytics' );
 
 function socialcrumbs_the_content( $content ) {
     $tokens = tokenText( get_the_content() );
-    if ( in_category( get_cat_ID('instagram') ) ) {
+    if ( has_category( 'instagram' ) ) {
         if ( has_tag( 'share-photo' ) ) {
 
             // Data [Caption, Url, SourceUrl, CreatedAt, EmbedCodee]
