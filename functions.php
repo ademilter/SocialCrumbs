@@ -31,6 +31,7 @@ function page_js_files()
 {
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-masonry');
+    wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js');
     wp_enqueue_script('plugin_js', get_template_directory_uri() . '/js/plugin.min.js', array('jquery-masonry'));
     wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.min.js', array('plugin_js'));
 }

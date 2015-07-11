@@ -401,26 +401,42 @@ nav ol, nav ul {
 textarea {
   resize: vertical; }
 
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
 .grid-sizer,
 .post {
-  width: calc(50% - 20px);
-  margin: 10px; }
+  width: 100%;
+  margin-bottom: 15px; }
   @media (min-width: 768px) {
     .grid-sizer,
     .post {
-      width: calc(33.333% - 30px);
+      float: left;
+      width: calc(50% - 30px);
       margin: 15px; } }
-  @media (min-width: 970px) {
+  @media (min-width: 992px) {
+    .grid-sizer,
+    .post {
+      width: calc(33.333% - 30px); } }
+  @media (min-width: 1200px) {
     .grid-sizer,
     .post {
       width: calc(25% - 30px); } }
 
 .post {
-  float: left;
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.18s;
-          transition: 0.18s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -553,14 +569,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit;
-  -webkit-transition: 0.18s;
-          transition: 0.18s; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px; }
-  @media (min-width: 768px) {
-    .container {
-      padding: 10px; } }
+  -webkit-transition: 0.23s;
+          transition: 0.23s; }
 /*# sourceMappingURL=style.css.map */

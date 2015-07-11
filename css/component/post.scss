@@ -1,22 +1,39 @@
 
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 15px;
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+
 .grid-sizer,
 .post {
-    width: calc(50% - 20px);
-    margin: 10px;
+    width: 100%;
+    margin-bottom: 15px;
     @media (min-width: 768px) {
-        width: calc(33.333% - 30px);
+        float: left;
+        width: calc(50% - 30px);
         margin: 15px;
     }
-    @media (min-width: 970px) {
+    @media (min-width: 992px) {
+        width: calc(33.333% - 30px);
+    }
+    @media (min-width: 1200px) {
         width: calc(25% - 30px);
     }
 }
 
 .post {
-    float: left;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(black, .2);
-    transition: $transition;
     user-select: none;
 
     &:hover {
