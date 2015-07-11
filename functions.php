@@ -217,7 +217,7 @@ function socialcrumbs_the_content( $content ) {
             $eventUrl = $tokens["Url"];
             $eventContent = $tokens["ImageThumbnailURL"];
 
-        } elseif ( has_tag( 'like-photo') {
+        } elseif ( has_tag( 'like-photo') ) {
 
             // Data [Caption, Url, SourceUrl, Username, CreatedAt, EmbedCode]
 
@@ -226,7 +226,7 @@ function socialcrumbs_the_content( $content ) {
             $eventUrl = $tokens["Url"];
             $eventContent = $tokens["SourceUrl"];
 
-        } elseif ( has_tag( 'like-video') {
+        } elseif ( has_tag( 'like-video') ) {
 
             // Data [Caption, URL, VideoSourceURL, ImageThumbnailURL, Username, CreatedAt, EmbedCode]
 
