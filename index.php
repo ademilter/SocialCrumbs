@@ -1,83 +1,72 @@
 <?php get_header(); ?>
 
-    <div class="container">
-        <div class="Timeline">
+<div class="container">
+    <div class="Timeline">
 
-            <div class="grid-sizer"></div>
+        <div class="grid-sizer"></div>
 
-            <?php
+        <?php
 
-            include "activity-template.php";
+        if (have_posts()) {
+        while (have_posts()) {
+            the_post();
 
-            $Cats = array(
-                get_cat_ID('codepen'),
-                get_cat_ID('delicious'),
-                get_cat_ID('dribbble'),
-                get_cat_ID('instapaper'),
-                get_cat_ID('foursquare'),
-                get_cat_ID('twitter'),
-                get_cat_ID('soundcloud'),
-                get_cat_ID('instagram'),
-                get_cat_ID('vimeo'),
-                get_cat_ID('youtube'),
-                get_cat_ID('lastfm'),
-                get_cat_ID('github')
-            );
+            $eventType = "";
+            $eventTitle = "";
+            $eventContent = "";
+            $eventUrl = "";
+            $eventTimeStamp = sprintf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp')));
+            $eventIconStatus = "";
 
-            $args = array(
-                'paged' => get_query_var('paged'),
-                'category__in' => $Cats
-            );
-
-            query_posts($args);
-
-            if (have_posts()) :
-            while (have_posts()) : the_post();
-
-                $eventType = "";
-                $eventTitle = "";
-                $eventContent = "";
-                $eventUrl = "";
-                $eventTimeStamp = sprintf(__('%s ago', 's-report'), human_time_diff(get_post_time('U'), current_time('timestamp')));
-                // connect, purchase, link, calendar, like, favorite, bookmark, watch, listen, add, write, checkin
-                $eventIconStatus = "";
-                $postCategories = get_the_category();
+            // get category
+            $postCategories = get_the_category();
+            $eventCategory = '';
+            if (!empty($postCategories[0])) {
                 $eventCategory = $postCategories[0]->slug;
-                $postTags = get_the_tags();
+            }
+
+            // get tag
+            $postTags = get_the_tags();
+            $tags = array();
+            if (is_array($postTags)) {
                 $tags = array_values($postTags);
+            }
+            $eventTag = '';
+            if (!empty($tags)) {
                 $eventTag = $tags[0]->slug;
-                $content = tokenText(get_the_content());
+            }
 
-                // Event Recipes
-                include "event/codepen.php";
-                include "event/delicious.php";
-                include "event/dribbble.php";
-                include "event/foursquare.php";
-                include "event/github.php";
-                include "event/instagram.php";
-                include "event/instapaper.php";
-                include "event/lastfm.php";
-                include "event/soundcloud.php";
-                include "event/twitter.php";
-                include "event/vimeo.php";
-                include "event/youtube.php";
+            $content = getDataObject(get_the_content());
 
-                // Event Template
-                eventTemplateSidebar($eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag);
+            // Event Recipes
+            include "event/codepen.php";
+            include "event/delicious.php";
+            include "event/dribbble.php";
+            include "event/foursquare.php";
+            include "event/github.php";
+            include "event/instagram.php";
+            include "event/instapaper.php";
+            include "event/lastfm.php";
+            include "event/soundcloud.php";
+            include "event/twitter.php";
+            include "event/vimeo.php";
+            include "event/youtube.php";
 
-            endwhile; ?>
-        </div>
+            // Event Template
+            eventTemplate($eventType, $eventTitle, $eventContent, $eventUrl, $eventTimeStamp, $eventIconStatus, $eventCategory, $eventTag);
 
-        <nav class="TimelineNav">
-            <?php next_posts_link(__('Older posts', 's-report')); ?>
-            <?php previous_posts_link(__('Newer posts', 's-report'));
-            ?>
-        </nav>
+        } ?>
+    </div>
 
-        <?php endif;
-        wp_reset_postdata();
-
+    <div class="More">
+        <?php
+        next_posts_link(__('Older posts', 's-report'));
+        //previous_posts_link(__('Newer posts', 's-report'));
         ?>
     </div>
+
+    <?php } ?>
+
+</div>
 
 <?php get_footer(); ?>
