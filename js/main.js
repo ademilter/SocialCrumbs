@@ -1,3 +1,5 @@
+var isMasonry = false;
+
 jQuery(function () {
 
     if (!Modernizr.mq('only all and (max-width: 768px)')) {
@@ -9,6 +11,7 @@ jQuery(function () {
                     itemSelector: '.post',
                     percentPosition: true
                 });
+                isMasonry = true;
             }).progress(function (instance, image) {
                 var result = image.isLoaded ? 'loaded' : 'broken';
                 console.log('image is ' + result + ' for ' + image.img.src);
