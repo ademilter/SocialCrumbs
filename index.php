@@ -44,7 +44,7 @@
                 $postCategories = get_the_category();
                 $eventCategory = $postCategories[0]->slug;
                 $postTags = get_the_tags();
-                $tags = array_values($postTags);
+                $tags = $postTags?array_values($postTags):[];
                 $eventTag = $tags[0]->slug;
                 $content = tokenText(get_the_content());
 
