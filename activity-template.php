@@ -33,7 +33,7 @@ function eventTemplateSidebar($eventType, $eventTitle, $eventContent, $eventUrl,
 
         <footer class="post-footer">
 
-            <a class="post-time" href="<?php echo $eventUrl; ?>">
+            <a class="post-time" href="<?php echo $eventUrl; ?>" target="_blank">
                 <time><?php echo $eventTimeStamp; ?></time>
             </a>
 
