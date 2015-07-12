@@ -53,6 +53,7 @@
             font-size: 16px;
 
             span {
+                margin-bottom: 4px;
                 display: block;
                 font-size: 14px;
                 font-weight: 400;
@@ -61,7 +62,6 @@
         }
 
         &_summary {
-            margin-top: 8px;
             font-family: 'Mercury SSm A', 'Mercury SSm B', Georgia, Times, 'Times New Roman', serif;
             word-break: break-word;
             cursor: default;
