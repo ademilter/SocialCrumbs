@@ -8,8 +8,12 @@
 2. Sign up for [ifttt](http://ifttt.com/) if you haven't already.
 3. Choose from the [recipes](https://github.com/ademilter/socialcrumbs/blob/master/README.md#recipes) below (You'll be asked for permission before using).
 
-###Notes
-"Most IF Recipes check for new Trigger data every 15 minutes. Some Recipes run even faster." -ifttt team
+###Features
+- [x] Infinite-scroll
+- [ ] Day by day separation
+- [ ] Filter (category or activity)
+- [ ] Random post button
+- more...
 
 ###Recipes
 - Dribbble
@@ -78,6 +82,10 @@
   - [ ] New Comment
   - [ ] Upvoted
   - [ ] Post Save
+- more...
+
+###Notes
+"Most IF Recipes check for new Trigger data every 15 minutes. Some Recipes run even faster." -ifttt team
 
 ###Using the theme list
 - **[adem.social](http://adem.social/)**
