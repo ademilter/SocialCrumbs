@@ -49,22 +49,25 @@ function set_infinite_scrolling()
         <script type="text/javascript">
             jQuery(".Timeline").infinitescroll({
                     loading: {
-                        selector: '.More a',
-                        img: '<?php echo get_template_directory_uri() ?>/img/loading.gif',
-                        //msgText: '',
-                        //finishedMsg: ''
+                        img: '<?php echo get_template_directory_uri() ?>/img/loading.gif'
                     },
                     behavior: "twitter",
                     contentSelector: ".Timeline",
                     itemSelector: ".post",
                     navSelector: ".More",
                     nextSelector: ".More a"
-                }, function (newElements) {
+                }, function (newElements, opts) {
                     if (isMasonry) {
-                        var $newElements = jQuery(newElements);
-                        $newElements.imagesLoaded(function () {
-                            $Timeline.masonry('appended', $newElements);
-                        });
+                        var $newElements = jQuery(newElements).css("display", "none");
+                        $newElements.imagesLoaded()
+                            .always(function (instance) {
+                                $newElements.css("display", "block");
+                                $Timeline.masonry('appended', $newElements);
+                                jQuery(opts.navSelector).removeClass("isLoading");
+                            })
+                            .progress(function (instance, image) {
+                                // progress bar eklenecek
+                            });
                     }
                 }
             );
