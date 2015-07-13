@@ -12,6 +12,7 @@
 - [x] Infinite-scroll
 - [ ] Day by day separation
 - [ ] Filter (category or activity)
+- [ ] Random post button
 - more...
 
 ###Recipes
