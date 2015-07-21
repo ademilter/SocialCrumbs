@@ -44,36 +44,42 @@ add_action('wp_enqueue_scripts', 'page_js_files');
  */
 function set_infinite_scrolling()
 {
-    if (is_home()) {
-        ?>
-        <script type="text/javascript">
-            jQuery(".Timeline").infinitescroll({
-                    loading: {
-                        img: '<?php echo get_template_directory_uri() ?>/img/loading.gif'
-                    },
-                    behavior: "twitter",
-                    contentSelector: ".Timeline",
-                    itemSelector: ".post",
-                    navSelector: ".More",
-                    nextSelector: ".More a"
-                }, function (newElements, opts) {
-                    if (isMasonry) {
-                        var $newElements = jQuery(newElements).css("display", "none");
-                        $newElements.imagesLoaded()
-                            .always(function (instance) {
-                                $newElements.css("display", "block");
-                                $Timeline.masonry('appended', $newElements);
-                                jQuery(opts.navSelector).removeClass("isLoading");
-                            })
-                            .progress(function (instance, image) {
-                                // progress bar eklenecek
-                            });
-                    }
+    ?>
+    <script type="text/javascript">
+        jQuery(".Timeline").infinitescroll({
+                loading: {
+                    img: '<?php echo get_template_directory_uri() ?>/img/loading.gif'
+                },
+                behavior: "twitter",
+                contentSelector: ".Timeline",
+                itemSelector: ".post",
+                navSelector: ".More",
+                nextSelector: ".More a"
+            }, function (newElements, opts) {
+                if (isMasonry) {
+                    var $newElements = jQuery(newElements).css("display", "none");
+                    $newElements.imagesLoaded()
+                        .always(function (instance) {
+                            $newElements.css("display", "block");
+                            $Timeline.masonry('appended', $newElements);
+                            jQuery(opts.navSelector).removeClass("isLoading");
+                        })
+                        .progress(function (instance, image) {
+                            // progress bar eklenecek
+                        });
                 }
-            );
-        </script>
-    <?php } ?>
+            }
+        );
 
+        jQuery("select").on("change", function () {
+            if (jQuery(this).val() > 0) {
+                location.href = "<?php echo esc_url(home_url('/')); ?>?cat=" + jQuery(this).val();
+            }
+            else {
+                location.href = "<?php echo esc_url(home_url('/')); ?>";
+            }
+        });
+    </script>
     <?php
 }
 
@@ -206,7 +212,9 @@ function socialcrumbs_setup_loop($query)
             get_cat_ID('github')
         );
         $query->set('category__in', $cats);
+//        $query->set('year', date('Y'));
+//        $query->set('monthnum', date('m'));
+//        $query->set('day', date('d'));
+//        $query->set('posts_per_page', -1);
     }
 }
-
-add_action('pre_get_posts', 'socialcrumbs_setup_loop');
