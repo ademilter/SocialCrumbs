@@ -1,11 +1,10 @@
 <?php if ($eventCategory == 'instapaper') {
 
-    $eventType = "link";
-
     if ($eventTag == 'like') {
 
         // Data [Title, Description, URL, CreatedAt]
 
+        $eventType = "link";
         $eventIconStatus = "like";
         $eventTitle = '<span>I liked;</span>' . $content["Title"];
         $eventUrl = $content["URL"];
@@ -15,6 +14,7 @@
 
         // Data [Title, Description, URL, CreatedAt]
 
+        $eventType = "link";
         $eventIconStatus = "bookmark";
         $eventTitle = '<span>I bookmark it;</span>' . $content["Title"];
         $eventUrl = $content["URL"];
@@ -22,12 +22,13 @@
 
     } elseif ($eventTag == 'highlight') {
 
-        // Data [Title, Description, URL, CreatedAt]
+        // Data [Text, Title, URL, CreatedAt]
 
-        $eventIconStatus = "favorite";
-        $eventTitle = '<span>I highlight it;</span>' . $content["Title"];
+        $eventType = "text";
+        $eventIconStatus = "bookmark";
+        $eventTitle = '<span>I highlight it;</span>';
         $eventUrl = $content["URL"];
-        $eventContent = $content["Description"];
+        $eventContent = $content["Text"];
 
     }
 

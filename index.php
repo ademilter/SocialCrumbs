@@ -1,6 +1,38 @@
 <?php get_header(); ?>
 
 <div class="container">
+
+
+    <header>
+        <?php
+
+        $cats = array(
+            get_cat_ID('codepen'),
+            get_cat_ID('delicious'),
+            get_cat_ID('dribbble'),
+            get_cat_ID('instapaper'),
+            get_cat_ID('foursquare'),
+            get_cat_ID('twitter'),
+            get_cat_ID('soundcloud'),
+            get_cat_ID('instagram'),
+            get_cat_ID('vimeo'),
+            get_cat_ID('youtube'),
+            get_cat_ID('lastfm'),
+            get_cat_ID('github')
+        );
+
+        $queryCategorySelect = array(
+            'show_count' => true,
+            'order' => 'ASC',
+            'show_option_none' => 'All Category',
+            'include' => $cats
+        );
+
+        wp_dropdown_categories($queryCategorySelect); ?>
+
+    </header>
+
+
     <div class="Timeline">
 
         <div class="grid-sizer"></div>
