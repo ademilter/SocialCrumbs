@@ -23,6 +23,7 @@
 
         $queryCategorySelect = array(
             'show_count' => true,
+            'order' => 'ASC',
             'show_option_none' => 'All Category',
             'include' => $cats
         );
