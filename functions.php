@@ -166,7 +166,7 @@ function eventTemplate($eventType, $eventTitle, $eventContent, $eventUrl, $event
 
         <footer class="post-footer">
 
-            <a class="post-time" href="<?php echo esc_url($eventUrl); ?>">
+            <a class="post-time" href="<?php echo esc_url($eventUrl); ?>" target="_blank">
                 <time><?php echo esc_html($eventTimeStamp); ?></time>
             </a>
 
@@ -218,3 +218,5 @@ function socialcrumbs_setup_loop($query)
 //        $query->set('posts_per_page', -1);
     }
 }
+
+add_action( 'pre_get_posts', 'socialcrumbs_setup_loop' );
