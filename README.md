@@ -89,4 +89,5 @@
 
 ###Using the theme list
 - **[adem.social](http://adem.social/)**
+- **[social.furkantektas.com](social.furkantektas.com)**
 - [Add link](https://github.com/ademilter/socialcrumbs/issues/1)
