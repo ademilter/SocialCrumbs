@@ -11,7 +11,7 @@
 ###Features
 - [x] Infinite-scroll
 - [ ] Day by day separation
-- [ ] Filter (category or activity)
+- [x] Filter (category or activity)
 - [ ] Random post button
 - more...
 
@@ -89,5 +89,5 @@
 
 ###Using the theme list
 - **[adem.social](http://adem.social/)**
-- **[social.furkantektas.com](social.furkantektas.com)**
+- **[social.furkantektas.com](http://social.furkantektas.com)**
 - [Add link](https://github.com/ademilter/socialcrumbs/issues/1)
