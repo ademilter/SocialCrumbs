@@ -1,8 +1,6 @@
 ###Demo
 [http://adem.social](http://adem.social/)
 
-[![SocialCrumbs wordpress theme](http://d.pr/i/11xR1+)](http://adem.social/)
-
 ###Installation
 1. Download the theme and activate it.
 2. Sign up for [ifttt](http://ifttt.com/) if you haven't already.
