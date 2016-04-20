@@ -38,6 +38,14 @@ function page_js_files()
 
 add_action('wp_enqueue_scripts', 'page_js_files');
 
+function page_css_files()
+{
+    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('styles', '//cloud.typography.com/7898554/661028/css/fonts.css');
+}
+
+add_action('wp_enqueue_styles', page_css_files);
+
 
 /**
  * Infinite Scroll

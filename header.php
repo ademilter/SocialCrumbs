@@ -13,9 +13,6 @@
 
     <?php include_once("dns-prefetch.php"); ?>
 
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7898554/661028/css/fonts.css"/>
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/style.css"/>
-
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php esc_html(get_bloginfo('pingback_url')); ?>">
     <?php wp_head(); ?>
