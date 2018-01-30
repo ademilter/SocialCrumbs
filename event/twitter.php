@@ -18,7 +18,7 @@
         $eventIconStatus = "favorite";
         $eventTitle = '<span>I faved tweet;</span>';
         $eventUrl = $content["LinkToTweet"];
-        $eventContent = $content["Text"];
+        $eventContent = $content["TweetEmbedCode"];
 
     }
 
